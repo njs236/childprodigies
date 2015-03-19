@@ -1,4 +1,4 @@
-var cp.CPModel.Theme = function (newId, newType, theMyth, theModel) {
+var Theme = function (newId, newType, theMyth, theModel) {
     var prot = {};
     prot.id = newId;
     prot.type = newType;

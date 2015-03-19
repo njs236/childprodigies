@@ -1,6 +1,8 @@
-var ExcellentKids = (function () {
+var cp = (function () {
     var initModule = function (){
-        var CPModel = ExcellentKids.CPModel.initModule();
+        console.log("initModule loaded");
+        var CPModel = CPModel.initModule();
+        
     }
 return {initModule: initModule}
 }

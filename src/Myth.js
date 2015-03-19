@@ -1,4 +1,4 @@
-var cp.CPModel.Myth = function (newId, newDescription, theModel) {
+var Myth = function (newId, newDescription, theModel) {
     prot = {};
     prot.id = newId;
     prot.description = newDescription;
