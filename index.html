@@ -15,6 +15,7 @@
         <link href="css/mainScreen.css" rel="stylesheet" type="text/css">
         <link href="css/navigationMapScreen.css" rel="stylesheet" type="text/css">
         <link href="css/mythScreen.css" rel="stylesheet" type="text/css">
+        <link href="css/themeScreen.css" rel="stylesheet" type="text/css">
         <title>Why Not? Shattering the Myths</title>
     </head>
     <body>
@@ -41,7 +42,7 @@
                     </div>
                 </div>
             </div>
-            <div id="navigationMapScreen" class="navScreen">
+            <div id="navigationMapScreen" class="navScreen" hidden>
             <div id="navigationMapTopArea">
                     <!-- Dynamic Insertion of Logo -->
                     <img src="media/images/whynot.svg" id="mainScreenLogo">
@@ -59,19 +60,18 @@
                 <!-- Inside this Div is the Brain Logo -->
                 <div id="navigationMapContentArea">
                     <div id="navigationMapTable">
-                        <table>
-                        <tr>
-                        <td ID="navigationMapMyth1">So You only use 10% of your brain do you?</td>
-                        <td ID="navigationMapMyth2">Prodigies are only found in the arts.</td>
-                        </tr>
-                        <tr>
-                        <td ID="navigationMapMyth3">What would you say about the competitiveness to excel?</td>
-                        <td ID="navigationMapMyth4">Brains are like computers?</td>
-                        </tr>
+                        <div class="navigationMapRow">
+                            <div ID="navigationMapMyth1" class="navigationMapMyth">So You only use 10% of your brain do you?</div>
+                            <div ID="navigationMapMyth2" class="navigationMapMyth">Prodigies are only found in the arts.</div>
+                        </div>
+                        <div class="navigationMapRow">
+                            <div ID="navigationMapMyth3" class="navigationMapMyth">What would you say about the competitiveness to excel?</div>
+                            <div ID="navigationMapMyth4" class="navigationMapMyth">Brains are like computers?</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="mythScreen" class="navScreen">
+            <div id="mythScreen" class="navScreen" hidden>
                 <div id="mythScreenLeftArea">
                     <div id="mythScreenThemeButtons">
                     <ul>
@@ -85,7 +85,7 @@
                 <div id="mythScreenRightArea">
                 </div>
             </div>
-            <div id="themeScreen" class="navScreen">
+            <div id="themeScreen" class="navScreen" hidden>
                 <div id="themeScreenLeftArea">
                 </div>
                 <div id="themeScreenRightArea">

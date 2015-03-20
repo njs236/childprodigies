@@ -1,0 +1,11 @@
+#themeScreenLeftArea {
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+
+#themeScreenRightArea {
+    float: left;
+    width: 75%;
+    height: 100%;
+}
