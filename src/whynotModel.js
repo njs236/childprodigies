@@ -42,9 +42,9 @@ WhynotModel.prototype.addSound = function () {
     this.allMySounds.push(sound);
 };
 
-WhynotModel.prototype.addText = function () {
-    var text = new Text ();
-    this.allMyText.push(text);
+WhynotModel.prototype.addText = function (newId, newFileName, theWhynotModel) {
+    var text = new Text(newId, newFileName, theWhynotModel)
+    this.allMyMedia.push(text);
 };
 
 initModule = function () {
