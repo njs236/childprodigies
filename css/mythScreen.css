@@ -1,0 +1,39 @@
+#mythScreenLeftArea {
+    width: 25%;
+    height: 100%; 
+    background-color: #000;
+}
+
+#mythScreenThemeButtons {
+    font-family: MyriadPro;
+    color: #fff;
+    padding: 2em;
+    margin: auto;
+    height: 8em;
+}
+
+#mythScreenThemeButtons ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#mythScreenThemeButtons li {
+    clear:both;
+    width:100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#mythScreenThemeButtons img {
+    width: 3em;
+    height: 3em;
+    float: left;
+}
+
+
+#mythScreenRightArea {
+    width:75%;
+    height: 100%;
+}
+
