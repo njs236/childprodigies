@@ -5,14 +5,48 @@
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"/>
         <meta name="mobile-web-app-capable" content="yes">
         <!-- Class Scripts -->
-        <script src="src/CPModel.js"></script>
+        <script src="src/whynot.js"></script>
+        <script src="src/whynotModel.js"></script>
         <script src="src/Myth.js"></script>
         <script src="src/Theme.js"></script>
         <script src="scripts.js"></script>
         <!-- CSS Files -->
-        <link href="css/MainPage.css" rel="stylesheet" type="text/css">
-        <title>WhyNot- Child Prodigies</title>
+        <link href="layout.css" rel="stylesheet" type="text/css">
+        <link href="css/mainScreen.css" rel="stylesheet" type="text/css">
+        <title>Why Not? Shattering the Myths</title>
     </head>
     <body>
+        <div id="borderDiv">
+            <div id="mainScreen" class="navScreen">
+                <div id="mainScreenTopArea">
+                    <!-- Dynamic Insertion of Logo -->
+                    <img src="media/images/whynot.svg" id="mainScreenLogo">
+                    <!-- mainScreen Navbar -->
+                    <div id="mainScreenNavBar" class="navBar">
+                    <ul>
+                    <li class="screenName"><a href="#">Home</a></li>
+                    <li class="button"><a href="#"></a></li>
+                    <li class="button"><a href="#">About Us</a></li>
+                    <li class="button"><a href="#">Contact</a></li>
+                    </ul>
+                    </div>
+                    
+                </div>
+                <!-- Inside this Div is the Brain Logo -->
+                <div id="mainScreenContentArea">
+                    <div id="mainScreenBrain">
+                        <img src="media/images/brainenlarged.jpg">
+                    </div>
+                </div>
+            </div>
+            <div id="navigationMapScreen" class="navScreen">
+            </div>
+            <div id="mythScreen" class="navScreen">
+            </div>
+            <div id="themeScreen" class="navScreen">
+            </div>
+            <div id="aboutUsScreen" class="navScreen">
+            </div>
+        </div>
     </body>
 </html>

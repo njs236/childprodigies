@@ -1,4 +1,4 @@
-var Theme = function (newId, newType, theMyth, theModel) {
+whynot.whynotModel.Theme = function (newId, newType, theMyth, theModel) {
     var prot = {};
     prot.id = newId;
     prot.type = newType;

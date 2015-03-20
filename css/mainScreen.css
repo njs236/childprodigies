@@ -1,0 +1,83 @@
+#mainScreenTopArea {
+	width:100%;
+	height:30%;
+	float:left;
+}
+
+#mainScreenLogo {
+    z-index: 99999;
+    float: right;
+    position: relative;
+    top: 0px;
+    width: 15em;
+    height: 15em;
+}
+
+.navBar {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000;
+    width: 100%;
+    margin: auto;
+    padding: auto;
+    height: 3em;
+}
+
+.navBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+
+.navBar li {
+    float: left;
+    height: 100%;
+    font-size: 1em;
+    font-family: Dotum;
+}
+
+.navBar li a {
+    vertical-align: middle;
+}
+
+ li.button {
+    width:6em;
+    text-align: center;
+    background: -webkit-radial-gradient(white 25%, black 70%, black 5%); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(white 25%, black 70%, black 5%); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(white 25%, black 70%, black 5%); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(white 25%, black 70%, black 5%); /* Standard syntax (must be last) */
+    }
+
+.screenName {
+    padding-left: 2em;
+    width: 8em;
+    background: none;
+    background-color: #000;
+    color: #fff;
+}
+
+#mainScreenContentArea {
+	width:100%;
+	height:70%;
+	float:left;
+	padding: 2em;
+}
+
+
+
+#mainScreenBrain {
+    margin: auto;
+    padding: auto;
+    width: 60%;
+}
+
+#mainScreenBrain img {
+    width: 600px;
+    height: 360px;
+}
+
