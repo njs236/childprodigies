@@ -1,4 +1,4 @@
-whynot.whynotModel.Myth = function (newId, newDescription, newPersonName, theModel) {
+whynot.model.Myth = function (newId, newDescription, newPersonName, theModel) {
     prot = {};
     prot.id = newId;
     prot.description = newDescription;
@@ -11,7 +11,7 @@ whynot.whynotModel.Myth = function (newId, newDescription, newPersonName, theMod
     }
 }
 
-whynot.whynotModel.Myth.prototype.addTheme = function (newId, newDescription, theMyth, theModel) {
+whynot.model.Myth.prototype.addTheme = function (newId, newDescription, theMyth, theModel) {
     var theme = new Theme (newId, newDescription, theMyth, theModel);
     this.getMyThemes().push(theme);
 }

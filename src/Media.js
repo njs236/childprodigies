@@ -1,4 +1,4 @@
-var whynot.whynotModel.Media = function (newId, newFileName, theWhynotModel) {
+whynot.model.Media = function (newId, newFileName, theWhynotModel) {
     var prot = {};
     prot.id = newId;
     prot.fileName = newFileName;

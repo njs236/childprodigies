@@ -1,7 +1,7 @@
-whynot.whynotModel = (function () {
-    var Myth, Theme, Media, initModule;
+whynot.model = (function () {
+    var Model, Myth, Theme, Media, initModule;
     
-    function WhynotModel () {
+    Model = function () {
     var prot = {};
     prot.allMyMyths = [];
     prot.allMyThemes = [];
@@ -17,38 +17,42 @@ whynot.whynotModel = (function () {
     };
 };
 
-WhynotModel.prototype.addMyth = function (newId, newDescription) {
+Model.prototype.addMyth = function (newId, newDescription) {
     var myth = new Myth (newId, newDescription, this);
     this.getMyMyths().push(myth);
 };
 
-WhynotModel.prototype.addTheme = function (newId, newType, myth) {
+Model.prototype.addTheme = function (newId, newType, myth) {
     var theme = myth.addTheme (newId, newType, myth, this);
     this.allMyThemes.push(theme);
 };
 
-WhynotModel.prototype.addVideo = function () {
+Model.prototype.addVideo = function () {
     var video = new Video ();
     this.allMyVideos.push(video);
 };
 
-WhynotModel.prototype.addImage = function () {
+Model.prototype.addImage = function () {
     var image = new Image ();
     this.allMyImages.push(image);
 };
 
-WhynotModel.prototype.addSound = function () {
+Model.prototype.addSound = function () {
     var sound = new Sound ();
     this.allMySounds.push(sound);
 };
 
-WhynotModel.prototype.addText = function (newId, newFileName, theWhynotModel) {
-    var text = new Text(newId, newFileName, theWhynotModel)
+Model.prototype.addText = function (newId, newFileName, theModel) {
+    var text = new Text(newId, newFileName, theModel)
     this.allMyMedia.push(text);
 };
 
+Model.prototype.loadElements = function (array, page) {
+    page.loadElements(array);
+}
+
 initModule = function () {
-    return new WhynotModel();
+    return new Model();
 };
 return {initModule: initModule};
 }

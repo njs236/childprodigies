@@ -1,20 +1,20 @@
-Text.prototype = object.create(Media.prototype);
-Text.prototype.constructor = Text; 
+whynot.model.Text.prototype = object.create(whynot.model.Media.prototype);
+whynot.model.Text.prototype.constructor = Text; 
 
-var whynot.whynotModel.Text = function (newId, newFileName, theWhynotModel) {
+whynot.model.Text = function (newId, newFileName, theWhynotModel) {
     Media.call (this, newId, newFileName, theWhynotModel);
     var prot = {};
     prot.text = loadText(newFileName);
 }
 
-Text.prototype.loadText = function (fileName) {
+whynot.model.Text.prototype.loadText = function (fileName) {
     "use strict";
     var reader = new FileReader();
     reader.onload = loadedHandler;
     reader.readAsText(fileName);
 }
 
-Text.prototype.loadedHandler = function (event) {
+whynot.model.Text.prototype.loadedHandler = function (event) {
 	"use strict";
 	var fileString, text;
 	console.log("LOADEDHANDLER() : File has been loaded");

@@ -6,7 +6,11 @@
         <meta name="mobile-web-app-capable" content="yes">
         <!-- Class Scripts -->
         <script src="src/whynot.js"></script>
+        <script src="src/view.js"></script>
+        <script src="src/controller.js"></script>
         <script src="src/whynotModel.js"></script>
+        <script src="src/Media.js"></script>
+        <script src="src/Text.js"></script>
         <script src="src/Myth.js"></script>
         <script src="src/Theme.js"></script>
         <script src="scripts.js"></script>
@@ -94,5 +98,10 @@
             <div id="aboutUsScreen" class="navScreen">
             </div>
         </div>
+        <script>
+        (function () {
+        whynot.initModule();                      
+        } () );
+        </script>
     </body>
 </html>
