@@ -68,7 +68,12 @@ and adds all the instantiated objects;
     
     Controller.prototype.onClickAddBtn = function () {
         /* Main Screen */
-        document.getElementById('mainScreenBrain').addEventListener("onclick", _view.showScreen('navigationMapScreen'))
+        document.getElementById('mainScreenBrain').addEventListener("onclick", _view.showScreen('navigationMapScreen'));
+        /*Navigation Map */
+        document.getElementById('navigationMapMyth1').addEventListener("onclick", _view.showScreen('mythScreen'));
+        document.getElementById('navigationMapMyth2').addEventListener("onclick", _view.showScreen('mythScreen'));
+        document.getElementById('navigationMapMyth3').addEventListener("onclick", _view.showScreen('mythScreen'));
+        document.getElementById('navigationMapMyth4').addEventListener("onclick", _view.showScreen('mythScreen'));
         /* myth screen buttons */
         document.getElementById('mythScreenText').addEventListener("onclick", _view.showScreen('themeScreen'))
         document.getElementById('mythScreenSound').addEventListener("onclick", _view.showScreen('themeScreen'))
