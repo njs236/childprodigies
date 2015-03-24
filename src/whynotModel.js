@@ -1,6 +1,17 @@
 whynot.model = (function () {
     var Model, Myth, Theme, Media, initModule;
     
+    var text = {
+        
+        emilyBear : "";
+        
+        santiagoGonsalez : "";
+        
+        tanishQ : "";
+        
+        cameronThompson : ""
+    }
+    
     Model = function () {
     var prot = {};
     prot.allMyMyths = [];
