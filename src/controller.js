@@ -21,7 +21,7 @@ and adds all the instantiated objects;
         myth,
         text,
         theme;
-        text = _this.addText('textThemeScreenEmilyBear', 'media/text/emilybear.txt');
+        text = _this.addText('textThemeScreenEmilyBear', 'Emily Bear has composed more than 350 songs, all for the piano. She has played at the White House, produced 6 albums, and she is 12 years old.','When she was 1 yr old, she would sing note for note in tune according to her mum. She started playing the piano when she was 4 years old, and does not want to be referred as a prodigy, as it sounds like someone who would be driven to excel.','According to an interview,  it was never the intention of her parents to drive her in anyway, as it is kept in balance with the life of the family, and motivating and empowering her to be all that she can be. She can compose a song on the spot for someone that gives them a description. She would rather be called a composer and not a prodigy.','At such a young age, this makes what is inside of her very remarkable, since the main reason she plays piano is the enjoyment of it, and the ability to showcase that talent to others. For that reason, she does not need to be driven to excel, since she has already the motivation she needs to excel. It comes from within her.');
         console.log("allObjectsData: emilyBearText added")
         _this.addMyth('10brainMythScreen', 'So You only use 10% of your brain do you?');
         _this.addMyth('artsMythScreen', 'Prodigies are only found in the arts.');
@@ -32,9 +32,10 @@ and adds all the instantiated objects;
         _this.loadElements(text, theme);
     };
     
-    Controller.prototype.addText = function (newId, newFileName) {
+    Controller.prototype.addText = function () {
+        var args = arguments;
         var theModel = this._model;
-        theModel.addText(newId, newFileName, theModel);
+        theModel.addText(args);
     };
     
     Controller.prototype.addMyth = function (newId, newDescription, newPersonName) {

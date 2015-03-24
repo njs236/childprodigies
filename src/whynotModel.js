@@ -1,17 +1,6 @@
 whynot.model = (function () {
     var Model, Myth, Theme, Media, initModule;
     
-    var text = {
-        
-        emilyBear : "";
-        
-        santiagoGonsalez : "";
-        
-        tanishQ : "";
-        
-        cameronThompson : ""
-    }
-    
     Model = function () {
     var prot = {};
     prot.allMyMyths = [];
@@ -53,9 +42,10 @@ Model.prototype.addSound = function () {
     this.allMySounds.push(sound);
 };
 
-Model.prototype.addText = function (newId, newFileName, theModel) {
-    var text = new Text(newId, newFileName, theModel)
-    this.allMyMedia.push(text);
+Model.prototype.addText = function (newId, newText) {
+    var args = arguments;
+    var text = new Text( this, args)
+    this.getMyMedia().push(text);
 };
 
 Model.prototype.loadElements = function (array, page) {
