@@ -54,11 +54,14 @@ and adds all the instantiated objects;
     }
     
     Controller.prototype.displayPage = function (object) {
-    if (object typeof Myth) {
+    var toString = Object.prototype.toString,
+        type = toString.call(object);
+    
+    if (type = Myth) {
        console.log("selected Myth Object");
-    } else if (object typeof Theme) {
+    } else if (type = Theme) {
        console.log("selected Theme Object") ;   
-    } else if (object typeof Model) {
+    } else if (type = Model) {
        console.log("selected Model Object");    
     } else {
        console.log("selected No Object") ;   
