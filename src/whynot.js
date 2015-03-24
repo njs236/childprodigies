@@ -12,6 +12,7 @@ whynot = (function () {
         var controller = whynot.controller.initModule(view, model);
         
         controller.allObjectsData();
+        controller.onClickAddBtn();
     }
 return {initModule: initModule}
 }

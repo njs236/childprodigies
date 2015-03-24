@@ -17,8 +17,8 @@ whynot.model = (function () {
     };
 };
 
-Model.prototype.addMyth = function (newId, newDescription) {
-    var myth = new Myth (newId, newDescription, this);
+Model.prototype.addMyth = function (newId, newDescription, newPersonName) {
+    var myth = new Myth (newId, newDescription, newPersonName, this);
     this.getMyMyths().push(myth);
 };
 
