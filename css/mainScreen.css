@@ -21,7 +21,7 @@
     width: 100%;
     margin: auto;
     padding: auto;
-    height: 3em;
+    height: 6em;
 }
 
 .navBar ul {
@@ -31,12 +31,10 @@
     height: 100%;
 }
 
-
-
 .navBar li {
     float: left;
     height: 100%;
-    font-size: 1em;
+    font-size: 2em;
     font-family: Dotum;
 }
 
@@ -45,7 +43,7 @@
 }
 
  li.button {
-    width:6em;
+    width:10em;
     text-align: center;
     background: -webkit-radial-gradient(white 25%, black 72%, black 3%); /* Safari 5.1 to 6.0 */
     background: -o-radial-gradient(white 25%, black 72%, black 3%); /* For Opera 11.6 to 12.0 */
@@ -68,16 +66,12 @@
 	padding: 2em;
 }
 
-
-
 #mainScreenBrain {
-    margin: auto;
-    padding: auto;
-    width: 60%;
+    position: relative;
+    top: 50%;
+    left : 50%;
+    transform: translateY(-50%);
+    width: 700px;
+    height: 560px;
+    background-image: url("../media/images/brainenlarged.png");
 }
-
-#mainScreenBrain img {
-    width: 600px;
-    height: 360px;
-}
-

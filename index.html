@@ -9,10 +9,6 @@
         <script src="src/view.js"></script>
         <script src="src/controller.js"></script>
         <script src="src/whynotModel.js"></script>
-        <script src="src/Media.js"></script>
-        <script src="src/Text.js"></script>
-        <script src="src/Myth.js"></script>
-        <script src="src/Theme.js"></script>
         <script src="scripts.js"></script>
         <!-- CSS Files -->
         <link href="layout.css" rel="stylesheet" type="text/css">
@@ -20,87 +16,115 @@
         <link href="css/navigationMapScreen.css" rel="stylesheet" type="text/css">
         <link href="css/mythScreen.css" rel="stylesheet" type="text/css">
         <link href="css/themeScreen.css" rel="stylesheet" type="text/css">
-        <title>Why Not? Shattering the Myths</title>
+        <title>Why Not? Shattering the Myth</title>
     </head>
     <body>
         <div id="borderDiv">
             <div id="mainScreen" class="navScreen">
-                <div id="mainScreenTopArea">
+                <div id="mainScreenContentArea">
                     <!-- Dynamic Insertion of Logo -->
-                    <img src="media/images/whynot.svg" id="mainScreenLogo">
+                    <img src="media/images/logo.svg" id="mainScreenLogo">
+                    <div id="mainScreenBrain">
+                        <!-- Css Image background -->
+                    </div>
+                </div>
+                <div id="mainScreenTopArea">
                     <!-- mainScreen Navbar -->
                     <div id="mainScreenNavBar" class="navBar">
                     <ul>
-                    <li class="screenName"><a href="#">Home</a></li>
-                    <li class="button"><a href="#"></a></li>
-                    <li class="button"><a href="#">About Us</a></li>
-                    <li class="button"><a href="#">Contact</a></li>
+                    <li class="screenName">Home</li>
+                    <li class="button"></li>
+                    <li class="button">About Us</li>
+                    <li class="button">Contact</li>
                     </ul>
-                    </div>
-                    
+                    </div> 
                 </div>
-                <!-- Inside this Div is the Brain Logo -->
-                <div id="mainScreenContentArea">
-                    <div id="mainScreenBrain">
-                        <img src="media/images/brainenlarged.jpg">
-                    </div>
-                </div>
+                
             </div>
             <div id="navigationMapScreen" class="navScreen" hidden>
-            <div id="navigationMapTopArea">
-                    <!-- Dynamic Insertion of Logo -->
-                    <img src="media/images/whynot.svg" id="mainScreenLogo">
+            <!-- Inside this Div is the Brain Logo -->
+                <div id="navigationMapContentArea">
+                <!-- Dynamic Insertion of Logo -->
+                    <img src="media/images/logo.svg" id="mainScreenLogo">
+                    <div id="navigationMapTable">
+                        <!-- Dynamic Creation of Table -->
+                    </div>
+                </div>
+                <div id="navigationMapTopArea">
+                    
                     <!-- mainScreen Navbar -->
                     <div id="navigationMapNavBar" class="navBar">
                     <ul>
-                    <li class="screenName"><a href="#">Navigation Map</a></li>
-                    <li class="button"><a href="#">Home</a></li>
-                    <li class="button"><a href="#">About Us</a></li>
-                    <li class="button"><a href="#">Contact</a></li>
+                    <li class="screenName">Navigation Map</li>
+                    <li class="button">Home</li>
+                    <li class="button">About Us</li>
+                    <li class="button">Contact</li>
                     </ul>
                     </div>
                     
                 </div>
-                <!-- Inside this Div is the Brain Logo -->
-                <div id="navigationMapContentArea">
-                    <div id="navigationMapTable">
-                        <div class="navigationMapRow">
-                            <div ID="navigationMapMyth1" class="navigationMapMyth">So You only use 10% of your brain do you?</div>
-                            <div ID="navigationMapMyth2" class="navigationMapMyth">Prodigies are only found in the arts.</div>
-                        </div>
-                        <div class="navigationMapRow">
-                            <div ID="navigationMapMyth3" class="navigationMapMyth">What would you say about the competitiveness to excel?</div>
-                            <div ID="navigationMapMyth4" class="navigationMapMyth">Brains are like computers?</div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
             <div id="mythScreen" class="navScreen" hidden>
-                <div id="mythScreenLeftArea">
-                    <div id="mythScreenThemeButtons">
-                    <ul>
-                        <li id="mythScreenText"><img src="media/images/green.png">Text</li>
-                        <li id="mythScreenSound"><img src="media/images/yellow.png">Auditory</li>
-                        <li id="mythScreenVideo"><img src="media/images/pink.png">Visual</li>
-                        <li id="mythScreenQuiz"><img src="media/images/blue.png">Kinesthetic</li>
-                    </ul>
+                <div id="mythScreenContentArea">
+                    <div id="mythScreenLeftArea">
+                        <div id="mythScreenThemeButtons">
+                        <ul>
+                            <li id="mythScreenText"><img src="media/images/green.png">Text</li>
+                            <li id="mythScreenSound"><img src="media/images/yellow.png">Auditory</li>
+                            <li id="mythScreenVideo"><img src="media/images/pink.png">Visual</li>
+                            <li id="mythScreenQuiz"><img src="media/images/blue.png">Kinesthetic</li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div id="mythScreenRightArea">
                     </div>
                 </div>
-                <div id="mythScreenRightArea">
-                </div>
-            </div>
-            <div id="themeScreen" class="navScreen" hidden>
-                <div id="themeScreenLeftArea">
-                    <div id="mythScreenThemeButtons">
+                <div id="mythScreenTopArea">
+                    <!-- Dynamic Insertion of Logo -->
+                    <img src="media/images/logo.svg" id="mainScreenLogo">
+                    <!-- mythScreen Navbar -->
+                    <div id="mythScreenNavBar" class="navBar">
                         <ul>
-                            <li id="themeScreenText"><img src="media/images/green.png">Text</li>
-                            <li id="themeScreenSound"><img src="media/images/yellow.png">Auditory</li>
-                            <li id="themeScreenVideo"><img src="media/images/pink.png">Visual</li>
-                            <li id="themeScreenQuiz"><img src="media/images/blue.png">Kinesthetic</li>
+                            <li class="screenName"><a href="#">Navigation Map</a></li>
+                            <li class="button">Home</li>
+                            <li class="button">About Us</li>
+                            <li class="button">Contact</li>
                         </ul>
                     </div>
                 </div>
-                <div id="themeScreenRightArea">
+            </div>
+            <div id="themeScreen" class="navScreen" hidden>
+                <div id="themeScreenContentArea">
+                    <div id="themeScreenLeftArea">
+                        <div id="themeScreenThemeButtons">
+                            <ul>
+                                <li id="themeScreenText"><img src="media/images/green.png">Text</li>
+                                <li id="themeScreenSound"><img src="media/images/yellow.png">Auditory</li>
+                                <li id="themeScreenVideo"><img src="media/images/pink.png">Visual</li>
+                                <li id="themeScreenQuiz"><img src="media/images/blue.png">Kinesthetic</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="themeScreenRightArea">
+                    <img id="themeScreenLeftButton">
+                        <div id="themeScreenElements">
+                        </div>
+                    <img id="themeScreenRightButton">
+                    </div>
+                </div>
+                <div id="themeScreenTopArea">
+                    <!-- Dynamic Insertion of Logo -->
+                    <img src="media/images/logo.svg" id="mainScreenLogo">
+                    <!-- mainScreen Navbar -->
+                    <div id="themeScreenNavBar" class="navBar">
+                        <ul>
+                            <li class="screenName"><a href="#">Navigation Map</a></li>
+                            <li class="button">Home</li>
+                            <li class="button">About Us</li>
+                            <li class="button">Contact</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div id="aboutUsScreen" class="navScreen">
