@@ -45,6 +45,67 @@ whynot.view = (function () {
         }
     }
     
+    View.prototype.displayObject = function (object) {
+        console.log(object);
+        /* displayObject: Version 1.0;
+        displays an object based on it's constructor type.
+        currently has 4 element types.
+        Text : returns the array of text in the object;
+        Image : returns the file name of the Image with width and height;
+        Video : returns the youtube video with width and height;
+        Link : returns an image with link to a new page, opens a new window on click.
+        */
+        var TAG,
+        text;
+        if (object.constructor.name == "Text") {
+            text = object.getText();
+               for (numberOfParagraphs; 
+                    numberOfParagraphs < text.length; 
+                    numberOfParagraphs = numberOfParagraphs +1) {
+                        TAG = document.createElement("P");
+                        TAG.innerHTML = text[numberOfParagraphs];
+                        console.log(TAG.innerHTML);
+                        //this._elements.themeScreen.Content.appendChild(TAG);
+                    };
+        } else if (object.constructor.name == "Image") {
+            image = object.getImage();
+            TAG = document.createElement("IMG");
+            TAG.src = image[0];
+            TAG.width = image[1];
+            TAG.height = image[2];
+            //this._elements.themeScreen.Content.appendChild(TAG);
+            
+        } else if (object.constructor.name == "Video") {
+            video = object.getVideo();
+            TAG = document.createElement("IFRAME");
+            TAG.src = video[0];
+            TAG.width = video[1];
+            TAG.height = video[2];
+            TAG.frameborder = 0;
+            TAG.allowfullscreen = true;
+            //this._elements.themeScreen.Content.appendChild(TAG);
+           
+        } else if (object.constructor.name == "Link") {
+            link = object.getLink();
+            TAG = document.createElement("A");
+            TAG.href = link[0];
+            TAG.target = "_blank";
+            //this._elements.themeScreen.Content.appendChild(TAG);
+        }   
+            document.getElementById('test').appendChild(TAG);
+    };
+    
+    View.prototype.displayAllObjects = function (objects) {
+        console.log("displayAllObjects: loaded");
+        console.log(objects.length);
+        var aMedia = 0;
+        for (aMedia; aMedia < objects.length; aMedia = aMedia + 1) {
+            console.log(objects[aMedia]);
+            this.displayObject(objects[aMedia]);
+        };
+    }
+    
+    
     View.prototype.display10brainElements = function (object) {
         var DIV;
         if (object._elements !== []) {

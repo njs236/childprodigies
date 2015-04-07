@@ -4,6 +4,23 @@
 	float:left;
 }
 
+#mainScreenContentArea {
+	width:100%;
+	height:70%;
+	float:left;
+	padding: 2em;
+}
+
+#mainScreenBrain {
+    position: relative;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+    width: 700px;
+    height: 560px;
+    background-image: url("../media/images/brainenlarged.png");
+}
+
 #mainScreenLogo {
     z-index: 99999;
     float: right;
@@ -36,10 +53,7 @@
     height: 100%;
     font-size: 2em;
     font-family: Dotum;
-}
-
-.navBar li a {
-    vertical-align: middle;
+    line-height: 100px;
 }
 
  li.button {
@@ -59,19 +73,4 @@
     color: #fff;
 }
 
-#mainScreenContentArea {
-	width:100%;
-	height:70%;
-	float:left;
-	padding: 2em;
-}
 
-#mainScreenBrain {
-    position: relative;
-    top: 50%;
-    left : 50%;
-    transform: translateY(-50%);
-    width: 700px;
-    height: 560px;
-    background-image: url("../media/images/brainenlarged.png");
-}

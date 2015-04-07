@@ -35,3 +35,9 @@ body {
     background-color: #fff
 }
 
+.button {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+

@@ -183,6 +183,12 @@ and adds all the instantiated objects;
         })
     };
     
+    Controller.prototype.displayAllObjects = function () {
+        var theModel = this._model,
+        theView = this._view;
+        theView.displayAllObjects(theModel.getMyMedia());
+    };
+    
     Controller.prototype.setUpNavigationMap = function () {
         var theModel = this._model,
             theView = this._view;

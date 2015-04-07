@@ -1,5 +1,5 @@
 whynot.model = (function () {
-    var Model, Myth, Theme, Media, Text, initModule;
+    var Model, Myth, Theme, Media, Text, Link, Video, Sound, Image, initModule;
     /* Constructor Functions */
     Model = function () {
     var prot = {};
@@ -83,12 +83,25 @@ whynot.model = (function () {
     };
     
     Text = function (theModel,newId, newText) {
-    Media.call (this, newId, '', theModel);
-    var prot = {};
-    prot.text = newText;
-    this.get = function () {
-        return this.getId() + " " + prot.text;
+        Media.call (this, newId, '', theModel);
+        var prot = {};
+        prot.text = newText;
+        this.getText = function () {
+            return prot.text;
+        };
+        this.get = function () {
+            return this.getId() + " " + prot.text;
+        };
+    return this;
     };
+    
+    Link = function (newId, newFileName, newTargetWindow, theModel) {
+        Media.call(this, newId, newFileName, theModel);
+        var prot = {};
+        prot.targetWindow = newTargetWindow;
+        this.getLink = function () {
+            return this.getFileName();
+        };
     return this;
     };
     
@@ -97,6 +110,9 @@ whynot.model = (function () {
         var prot = {};
         prot.width = newWidth;
         prot.height = newHeight;
+        this.getVideo = function () {
+            return [this.getFileName(), prot.width, prot.height];
+        }
     return this;
     };
     
@@ -109,6 +125,9 @@ whynot.model = (function () {
         prot = {};
         prot.width = newWidth;
         prot.height = newHeight;
+        this.getImage = function () {
+            return [this.getFileName(), prot.width, prot.height];
+        }
         this.getDimensions = function () {
             return [prot.width, prot.height];
         };
@@ -125,6 +144,9 @@ whynot.model = (function () {
     
     Image.prototype = Object.create(Media.prototype);
     Image.prototype.constructor = Image;
+    
+    Link.prototype = Object.create(Media.prototype);
+    Link.prototype.constructor = Link;
     
     /* Controller functions*/
 
@@ -166,9 +188,15 @@ Model.prototype.addText = function (newId, newText) {
     return text;
 };
 
+Model.prototype.addLink = function (newId, newFileName, newTargetWindow) {
+    var link = new Link (newId, newFileName, newTargetWindow, this);
+    this.getMyMedia().push(link);
+    return link;
+};
+
 Model.prototype.loadElements = function (array, page) {
     page.loadElements(array);
-}
+};
 
 Model.prototype.displayNavigationMap = function () {
     var aMyth, result = [];
