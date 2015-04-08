@@ -23,17 +23,15 @@ whynot = (function () {
         
         controller.allObjectsData();
         
+        /*
         controller.onClickAddBtn();
-        
-        console.log(controller);
-        console.log(model.getMyMedia());
-        console.log(model.getMyMedia()[0].getId());
-        console.log(model.getMyMedia()[0].getText());
+        */
 
+        /*
         controller.displayAllObjects();
-        
-        
+       */
         controller.setUpNavigationMap();
+        
     }
 return {initModule: initModule}
 }

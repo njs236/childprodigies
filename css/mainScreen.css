@@ -23,8 +23,8 @@
 
 #mainScreenLogo {
     z-index: 99999;
-    float: right;
-    position: relative;
+    right: 0px;
+    position: absolute;
     top: 0px;
     width: 15em;
     height: 15em;
@@ -38,7 +38,7 @@
     width: 100%;
     margin: auto;
     padding: auto;
-    height: 6em;
+    height: 4em;
 }
 
 .navBar ul {
@@ -51,13 +51,13 @@
 .navBar li {
     float: left;
     height: 100%;
-    font-size: 2em;
+    font-size: 1.2em;
     font-family: Dotum;
-    line-height: 100px;
+    line-height: 60px;
 }
 
  li.button {
-    width:10em;
+    width:6em;
     text-align: center;
     background: -webkit-radial-gradient(white 25%, black 72%, black 3%); /* Safari 5.1 to 6.0 */
     background: -o-radial-gradient(white 25%, black 72%, black 3%); /* For Opera 11.6 to 12.0 */

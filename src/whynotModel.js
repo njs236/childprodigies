@@ -2,33 +2,22 @@ whynot.model = (function () {
     var Model, Myth, Theme, Media, Text, Link, Video, Sound, Image, initModule;
     /* Constructor Functions */
     Model = function () {
-    var prot = {};
-    prot.allMyMyths = [];
-    prot.allMyThemes = [];
-    prot.allMyMedia = [];
-    this.getMyMyths = function () {
-        return prot.allMyMyths;
-    };
-    this.getMyThemes = function () {
-        return prot.allMyThemes;
-    };
-    this.getMyMedia = function () {
-        return prot.allMyMedia;
-    };
-    return this;
+    this.allMyMyths = [];
+    this.allMyThemes = [];
+    this.allMyMedia = [];
+
     };
     Myth = function (newId, newDescription, newPersonName, theModel) {
     prot = {};
     prot.id = newId;
     prot.description = newDescription;
-    prot._elements = [];
-    prot.allMyThemes = [];
+    prot._pageElements = [];
+    this.getId = function () {
+        return prot.id;
+    }
+    this.allMyThemes = [];
     prot._model = theModel;
     prot.personName = newPersonName;
-    
-    this.getMyThemes = function () {
-        return prot.allMyThemes;
-    }
     
     this.getNavigationInfo = function () {
         return [prot.personName, prot.description];
@@ -66,11 +55,11 @@ whynot.model = (function () {
     var prot = {};
     prot.id = newId;
     prot.type = newType;
-    prot._elements = [];
+    prot._pageElements = [];
     prot._myth = theMyth;
     prot._model = theModel;
     this.getElements = function () {
-        return prot._elements;
+        return prot._pageElements;
     }
     return this;
     };
@@ -152,45 +141,44 @@ whynot.model = (function () {
 
     Myth.prototype.addTheme = function (newId, newDescription, theMyth, theModel) {
     var theme = new Theme (newId, newDescription, theMyth, theModel);
-    this.getMyThemes().push(theme);
-}
+    this.allMyThemes.push(theme);
+    }
 
 Model.prototype.addMyth = function (newId, newDescription, newPersonName) {
-    var myth = new Myth (newId, newDescription, newPersonName, this);
-    this.getMyMyths().push(myth);
-    return myth;
+    var newMyth = new Myth (newId, newDescription, newPersonName, this);
+    this.allMyMyths.push(newMyth);
 };
 
 Model.prototype.addTheme = function (newId, newType, myth) {
     var theme = myth.addTheme (newId, newType, myth, this);
-    myth.getMyThemes().push(theme);
+    this.allMyThemes.push(theme);
     return theme;
 };
 
 Model.prototype.addVideo = function (newId, newFileName, newWidth, newHeight) {
     var video = new Video (newId, newFileName, this, newWidth, newHeight);
-    this.getMyMedia().push(video);
+    this.allMyMedia.push(video);
 };
 
 Model.prototype.addImage = function (newId, newFileName, newWidth, newHeight) {
     var image = new Image (newId, newFileName, this, newWidth, newHeight);
-    this.getMyMedia().push(image);
+    this.allMyMedia.push(image);
 };
 
 Model.prototype.addSound = function (newId, newFileName) {
     var sound = new Sound (newId, newFileName, this);
-    this.getMyMedia().push(sound);
+    this.allMyMedia.push(sound);
 };
 
 Model.prototype.addText = function (newId, newText) {
     var text = new Text( this, newId, newText);
-    this.getMyMedia().push(text);
+    this.allMyMedia.push(text);
     return text;
 };
 
 Model.prototype.addLink = function (newId, newFileName, newTargetWindow) {
     var link = new Link (newId, newFileName, newTargetWindow, this);
-    this.getMyMedia().push(link);
+    this.allMyMedia.push(link);
     return link;
 };
 
@@ -200,16 +188,18 @@ Model.prototype.loadElements = function (array, page) {
 
 Model.prototype.displayNavigationMap = function () {
     var aMyth, result = [];
-    for (aMyth of this.getMyMths()) {
-        result.push([aMyth.getNavigationInfo()]);
+    for (aMyth of this.allMyMyths) {
+        result.push(aMyth.getNavigationInfo().slice(0));
     }
     return result;
 }
 
 Model.prototype.findMythById = function (id) {
     var aMyth;
-    for (aMyth of this.getMyMyths()) {
-        if (aMyth.id === id) {
+    console.log(this.allMyMyths);
+    for (aMyth of this.allMyMyths) {
+        console.log(aMyth.getId());
+        if (aMyth.getId() == id) {
             return aMyth;
         }
     }

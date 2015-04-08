@@ -18,6 +18,7 @@ and adds all the instantiated objects;
     
     Controller.prototype.allObjectsData = function () {
         var _this = this,
+        aMyth =0,
         myth = {},
         text = {},
         video = {},
@@ -63,7 +64,11 @@ and adds all the instantiated objects;
         _this.addImage('imageRight', 'media/images/right.svg', 50, 50);
         _this.addMyth('10brainMythScreen', 'So You only use 10% of your brain do you?', 'Santiago Gonsalez');
         _this.addMyth('artsMythScreen', 'Prodigies are only found in the arts.', 'Cameron Thompson');
-        myth = _this.addMyth('excelMythScreen', 'What would you say about the competitiveness to excel?','Emily Bear');
+        _this.addMyth('excelMythScreen', 'What would you say about the competitiveness to excel?','Emily Bear');
+        console.log(this._model.allMyMyths.length);
+        for (aMyth; aMyth < this._model.allMyMyths.length; aMyth = aMyth +1) {
+            console.log(this._model.allMyMyths[aMyth].getId());
+        }
         _this.addMyth('computerMythScreen', 'Brains are like computers?','TanishQ');
         
         theme = _this.addTheme('EmilyBearThemeScreenText', 'text', myth);
@@ -109,8 +114,7 @@ and adds all the instantiated objects;
         _this._view.onClickSantiago(function () {
             _this.setUp10brainScreen();
         })
-    }
-    
+    };
     Controller.prototype.onClickCameron = function () {
         var _this = this;
         _this._view.onClickCameron(function () {
@@ -131,14 +135,29 @@ and adds all the instantiated objects;
     };
     
     Controller.prototype.setUpExcelScreen = function () {
+        console.log("excelScreenLoaded");
         var theView = this._view,
             theModel = this._model;
-            result = theModel.findMythById('excelMythScreen')
+            result = theModel.findMythById('excelMythScreen');
             if (result !== false) {
                 theView.displayExcelElements(result);
             } else {
                 console.log("invalid input");
             }
+        theView.showMythScreen();
+    };
+    
+    
+    Controller.prototype.setUpComputerScreen = function () {
+        theView.showMythScreen;
+    };
+    
+    Controller.prototype.setUp10brainScreen = function () {
+        theView.showMythScreen;
+    };
+    
+    Controller.prototype.setUpArtsScreen = function () {
+        theView.showMythScreen;
     };
     
     Controller.prototype.addMyth = function (newId, newDescription, newPersonName) {
@@ -179,14 +198,14 @@ and adds all the instantiated objects;
     Controller.prototype.onClickAddBtn = function () {
         var _this = this;
         _this._view.onClickAddBtn(function () {
-            _this.setUpNavigationMap();
+            _this.setUpNavigationMap;
         })
     };
     
     Controller.prototype.displayAllObjects = function () {
         var theModel = this._model,
         theView = this._view;
-        theView.displayAllObjects(theModel.getMyMedia());
+        theView.displayAllObjects(theModel.allMyMedia);
     };
     
     Controller.prototype.setUpNavigationMap = function () {

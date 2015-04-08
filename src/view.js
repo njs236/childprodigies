@@ -1,7 +1,8 @@
 whynot.view = (function () {
     var View, initModule, selectionObject;
-    View = function (elements) {
-        this._elements = elements;
+    View = function (viewElements) {
+        this._viewElements = viewElements;
+        //console.log(this._elements);
     };
     
     View.prototype.setController = function (controller) {
@@ -16,7 +17,7 @@ whynot.view = (function () {
 			count;
 		screens = document.getElementsByClassName("navScreen");
 		for ( count = 0; count < screens.length; count = count + 1 ) {
-			console.log("hideAll() : Hiding " + screens[count].id);
+			
 			screens[count].hidden = true;
 		};
 	};
@@ -24,24 +25,26 @@ whynot.view = (function () {
     View.prototype.showNavigationMap = function () {
         console.log("navclickLoaded");
         var _this = this;
-        _this.showScreen(this._elements.navigationMap.Page);
+        this.showScreen(this._viewElements.navigationMap.Page);
     };
     
     View.prototype.showMythScreen = function () {
         console.log("mythScreenLoaded");
         var _this = this;
-        _this.showScreen(this._elements.mythScreen.page);
+        console.log(this._elements);
+        this.showScreen(this._viewElements.mythScreen.Page);
     }
     
     View.prototype.displayExcelElements = function (object) {
+        console.log("excelScreenLoaded");
         var DIV;
-        if (object._elements !== []) {
+        if (object._pageElements !== []) {
             console.log("No elements")
         } else {
             DIV = document.createElement("DIV");
             DIV.id = object.getScreenElements()[0];
             DIV.textContent = "placeholder text";
-            this._elements.mythScreen.Content.appendChild(DIV);
+            this._viewElements.mythScreen.Content.appendChild(DIV);
         }
     }
     
@@ -108,37 +111,37 @@ whynot.view = (function () {
     
     View.prototype.display10brainElements = function (object) {
         var DIV;
-        if (object._elements !== []) {
+        if (object._pageElements !== []) {
             console.log("No elements")
         } else {
             DIV = document.createElement("DIV");
             DIV.id = object.getScreenElements()[0];
             DIV.textContent = "placeholder text";
-            this._elements.mythScreen.Content.appendChild(DIV);
+            this._viewElements.mythScreen.Content.appendChild(DIV);
         }
     }
     
     View.prototype.displayArtsElements = function (object) {
         var DIV;
-        if (object._elements !== []) {
+        if (object._pageElements !== []) {
             console.log("No elements")
         } else {
             DIV = document.createElement("DIV");
             DIV.id = object.getScreenElements()[0];
             DIV.textContent = "placeholder text";
-            this._elements.mythScreen.Content.appendChild(DIV);
+            this._viewElements.mythScreen.Content.appendChild(DIV);
         }
     }
     
     View.prototype.displayComputerElements = function (object) {
         var DIV;
-        if (object._elements !== []) {
+        if (object._pageElements !== []) {
             console.log("No elements")
         } else {
             DIV = document.createElement("DIV");
             DIV.id = object.getScreenElements()[0];
             DIV.textContent = "placeholder text";
-            this._elements.mythScreen.Content.appendChild(DIV);
+            this._viewElements.mythScreen.Content.appendChild(DIV);
         }
     }
     
@@ -150,20 +153,22 @@ whynot.view = (function () {
         personName, the name of the person that is being found out.
         description, the description of the myth.
         */
+        console.log(mythTable);
         var DIV, count;
         for (count = 0; count <mythTable.length; count = count+1) {
         // including rows.
         if (count %2 ===0) {
         DIV = document.createElement("DIV");
         DIV.className = "navigationMapRow";
-        this._elements.navigationMap.Table.appendChild(DIV);
+        this._viewElements.navigationMap.Table.appendChild(DIV);
         };
         
         DIV = document.createElement("DIV");
         DIV.className = "navigationMapMyth";
         DIV.id = "navigationMapMyth" + (count + 1);
-        DIV.textContent = mythTable[count][1];
-        this._elements.navigationMap.Table.lastChild.appendChild(DIV);
+        console.log(DIV.id);
+        DIV.innerHTML = mythTable[count][1];
+        this._viewElements.navigationMap.Table.lastChild.appendChild(DIV);
         }
         
         this._controller.onClickSantiago();
@@ -186,27 +191,23 @@ whynot.view = (function () {
         */
     
     View.prototype.onClickSantiago = function (callback) {
-        var myth = document.getElementsById('navigationMapMyth1');
+        var myth = document.getElementById('navigationMapMyth1');
         myth.addEventListener("click", callback);
-        myth.addEventListener("click", this.showMythScreen);
     };
     
     View.prototype.onClickCameron = function (callback) {
-        var myth = document.getElementsById('navigationMapMyth2');
+        var myth = document.getElementById('navigationMapMyth2');
         myth.addEventListener("click", callback);
-        myth.addEventListener("click", this.showMythScreen);
     }
     
     View.prototype.onClickEmily = function (callback) {
-        var myth = document.getElementsById('navigationMapMyth3');
+        var myth = document.getElementById('navigationMapMyth3');
         myth.addEventListener("click", callback);
-        myth.addEventListener("click", this.showMythScreen);
     }
     
     View.prototype.onClickTanish = function (callback) {
-        var myth = document.getElementsById('navigationMapMyth4');
+        var myth = document.getElementById('navigationMapMyth4');
         myth.addEventListener("click", callback);
-        myth.addEventListener("click", this.showMythScreen);
     }
     
     
@@ -219,10 +220,8 @@ whynot.view = (function () {
   View.prototype.onClickAddBtn = function (callback) {
       console.log("onClickLoaded");
         /* Main Screen */
-        var element = document.getElementById('mainScreenBrain');
-        element.onclick = callback;
-        // this._elements.mainScreen.Brain.onclick = callback;
-        console.log(this._elements.mainScreen.Brain);
+        this._viewElements.mainScreen.Brain.addEventListener("click", callback);
+        console.log(this._viewElements.mainScreen.Brain);
         /* myth screen buttons
         document.getElementById('mythScreenText').onclick = showScreen('themeScreen');
         document.getElementById('mythScreenSound').onclick = showScreen('themeScreen');
@@ -235,8 +234,8 @@ whynot.view = (function () {
         document.getElementById('themeScreenQuiz').onclick = showScreen('themeScreen');*/
     };
     
-    initModule = function (elements) {
-        return new View(elements);
+    initModule = function (viewElements) {
+        return new View(viewElements);
     };
     
     return {initModule: initModule,
