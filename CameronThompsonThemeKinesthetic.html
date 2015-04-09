@@ -20,7 +20,7 @@
     </head>
     <body>
         <div id="borderDiv">
-            <div id="mainScreen" class="navScreen">
+            <div id="themeScreen" class="navScreen">
                 <div>
                     <div id="contactModal" class="modalDialog">
                         <div id="contactModalContent">
@@ -48,31 +48,54 @@
                     </div>
                 </div>
                 <div class="contentArea">
-                    <!-- Dynamic Insertion of Logo -->
-                    <div id="mainScreenBrain">
-                        <!-- Css Image background -->
+                    <div class="navArea">
+                        <div class="navButtons">
+                            <ul>
+                                <li id="themeScreenText"><img src="media/images/green.png">Text</li>
+                                <li id="themeScreenVideo"><img src="media/images/pink.png">Visual</li>
+                                <li id="themeScreenKinesthetic"><img src="media/images/blue.png">Kinesthetic</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="themeScreenRightArea">
+                    <img id="themeScreenLeftButton">
+                        <div id="themeScreenElements">
+                        <p>If you would like to hear more about Cameron, and respond to the request for help to raise funds for His college career, there are a few links below to keep in touch with Him and a facebook group for the movie that was put out.</p>
+                        <p>
+                        <ul>
+                        <li id="twitter"><img src="media/images/Twitter_logo_blue.png" ></li>
+                        <li id="facebook"><img src="media/images/facebook-icon.png"></li>
+                        <li id="youcaring"><img src="media/images/globe.png" ></li>
+                        </p>
+                        </div>
+                    <img id="themeScreenRightButton">
                     </div>
                 </div>
                 <div class="bottomArea">
-                <img src="media/images/logo.svg" id="mainScreenLogo">   
+                    <!-- Dynamic Insertion of Logo -->
+                    <img src="media/images/logo.svg" id="mainScreenLogo">
                     <!-- mainScreen Navbar -->
-                    <div id="mainScreenNavBar" class="navBar">
-                    <ul>
-                    <li class="screenName">Home</li>
-                    <li class="button" id="aboutus">About Us</li>
-                    <li class="button" id="contact">Contact</li>
-                    </ul>
-                    </div> 
+                    <div id="themeScreenNavBar" class="navBar">
+                        <ul>
+                            <li class="screenName">Cameron Thompson.kinesthetic</li>
+                            <li class="button" id="navMap">Navigation Map</li>
+                            <li class="button" id="aboutus">About Us</li>
+                            <li class="button" id="contact">Contact</li>
+                        </ul>
+                    </div>
                 </div>
-                
             </div>
         </div>
         <script>
-            document.getElementById('mainScreenBrain').addEventListener("click", gotoNavigationMap);
+            document.getElementById('navMap').addEventListener("click", gotoNavigationMap);
             document.getElementById('aboutus').addEventListener("click", gotoAboutUs);
             document.getElementById('contact').addEventListener("click", gotoContact);
-            document.getElementById('contactModal').addEventListener("click", closeModal)
-            
+            document.getElementById('themeScreenText').addEventListener("click", gotoCameronThompsonText);
+            document.getElementById('themeScreenVideo').addEventListener("click", gotoCameronThompsonVideo);
+            document.getElementById('contactModal').addEventListener("click", closeModal);
+            document.getElementById("facebook").addEventListener("click", gotoCameronFacebook);
+            document.getElementById("twitter").addEventListener("click", gotoCameronTwitter);
+            document.getElementById("youcaring").addEventListener("click", gotoCameronYouCaring);
         </script>
     </body>
-</html>
+    </html>

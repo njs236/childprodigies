@@ -1,4 +1,4 @@
-whynot.controller = (function () {
+controller = (function () {
 /*
 the controller class knows the view and the model
 and can modify the model and the view 
@@ -212,7 +212,6 @@ and adds all the instantiated objects;
         var theModel = this._model,
             theView = this._view;
         theView.displayNavigationMap(theModel.displayNavigationMap());
-        theView.showNavigationMap();
     }
     
     initModule = function (view, model) {

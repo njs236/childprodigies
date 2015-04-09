@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"/>
+        <meta name="mobile-web-app-capable" content="yes">
+         <!-- Class Scripts
+      <script src="src/whynot.js"></script>
+        <script src="src/view.js"></script>
+        <script src="src/controller.js"></script>
+        <script src="src/whynotModel.js"></script>-->
+        <script src="scripts.js"></script>
+        <!-- CSS Files -->
+        <link href="layout.css" rel="stylesheet" type="text/css">
+        <link href="css/mainScreen.css" rel="stylesheet" type="text/css">
+        <link href="css/navigationMapScreen.css" rel="stylesheet" type="text/css">
+        <link href="css/mythScreen.css" rel="stylesheet" type="text/css">
+        <link href="css/themeScreen.css" rel="stylesheet" type="text/css">
+        <title>Why Not? Shattering the Myth</title>
+    </head>
+    <body>
+        <div id="borderDiv">
+            <div id="themeScreen" class="navScreen">
+                <div>
+                    <div id="contactModal" class="modalDialog">
+                        <div id="contactModalContent">
+                            <p>
+                            If you would like to leave some comment regarding this website, or simply want to get in contact, here is a form that you can use to get in contact with me (the producer of the website)
+                            </p>
+                            <form>
+                            <div id="contactModalName">
+                            <label for="Name">Name</label>
+                                <input id="Name" type="text"></input>
+                            </div>
+                            <div id="contactModalEmail">
+                                <label for="Email">Email</label>
+                                <input id="Email "type="text"></input>
+                            </div>
+                            <div id="contactModalComment">
+                            <label for="Comments">Comments</label>
+                                <textarea id="Comments" rows="5"></textArea>
+                            </div>
+                            <div id="contactModalSubmit">
+                                <input type="submit" value="submit"></input>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentArea">
+                    <div class="navArea">
+                        <div class="navButtons">
+                            <ul>
+                                <li id="themeScreenText"><img src="media/images/green.png">Text</li>
+                                <li id="themeScreenSound"><img src="media/images/yellow.png">Auditory</li>
+                                <li id="themeScreenVideo"><img src="media/images/pink.png">Visual</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="themeScreenRightArea">
+                    <img id="themeScreenLeftButton">
+                        <div id="themeScreenElements">
+                        <p>I happened upon a young girl that plays the piano while researching for this project.</p>
+                        <p>Emily Bear has composed more than 350 songs, all for the piano. She has played at the White House, produced 6 albums, and she is 12 years old.
+                        </p>
+                        <p>When she was 1 yr old, she would sing note for note in tune according to her mum. She started playing the piano when she was 4 years old, and does not want to be referred as a prodigy, as it sounds like someone who would be driven to excel.</p>
+                        <p>According to an interview,  it was never the intention of her parents to drive her in anyway, as it is kept in balance with the life of the family, and motivating and empowering her to be all that she can be. She can compose a song on the spot for someone that gives them a description. She would rather be called a composer and not a prodigy.</p>
+                        <p>At such a young age, this makes what is inside of her very remarkable, since the main reason she plays piano is the enjoyment of it, and the ability to showcase that talent to others. For that reason, she does not need to be driven to excel, since she has already the motivation she needs to excel. It comes from within her.
+                        </p>
+                        </div>
+                    <img id="themeScreenRightButton">
+                    </div>
+                </div>
+                <div class="bottomArea">
+                    <!-- Dynamic Insertion of Logo -->
+                    <img src="media/images/logo.svg" id="mainScreenLogo">
+                    <!-- mainScreen Navbar -->
+                    <div id="themeScreenNavBar" class="navBar">
+                        <ul>
+                            <li class="screenName">Emily Bear.text</li>
+                            <li class="button" id="navMap">Navigation Map</li>
+                            <li class="button" id="aboutus">About Us</li>
+                            <li class="button" id="contact">Contact</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById('navMap').addEventListener("click", gotoNavigationMap);
+            document.getElementById('aboutus').addEventListener("click", gotoAboutUs);
+            document.getElementById('contact').addEventListener("click", gotoContact);
+            document.getElementById('themeScreenSound').addEventListener("click", gotoEmilyBearSound);
+            document.getElementById('themeScreenVideo').addEventListener("click", gotoEmilyBearVideo);
+            document.getElementById('contactModal').addEventListener("click", closeModal);
+        </script>
+    </body>
+    </html>

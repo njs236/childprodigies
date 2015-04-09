@@ -20,7 +20,7 @@
     </head>
     <body>
         <div id="borderDiv">
-            <div id="mainScreen" class="navScreen">
+            <div id="themeScreen" class="navScreen">
                 <div>
                     <div id="contactModal" class="modalDialog">
                         <div id="contactModalContent">
@@ -48,31 +48,53 @@
                     </div>
                 </div>
                 <div class="contentArea">
-                    <!-- Dynamic Insertion of Logo -->
-                    <div id="mainScreenBrain">
-                        <!-- Css Image background -->
+                    <div class="navArea">
+                        <div class="navButtons">
+                            <ul>
+                                <li id="themeScreenText"><img src="media/images/green.png">Text</li>
+                                <li id="themeScreenSound"><img src="media/images/yellow.png">Auditory</li>
+                                <li id="themeScreenVideo"><img src="media/images/pink.png">Visual</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="themeScreenRightArea">
+                        <div id="leftButton" hidden>
+                            <img src="media/images/left.svg" id="themeScreenLeftButton">
+                        </div>
+                        <div class="panel" id="themeScreenElements1">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/4NKI1ThktUA?list=RDFfaNvNKh6H8" align="middle"frameborder="0" allowfullscreen></iframe>   
+                        </div>
+                        <div class="panel" id="themeScreenElements2" hidden>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/wOcbtj73QbA?list=RDFfaNvNKh6H8" align="middle" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div id="rightButton" hidden>
+                            <img src="media/images/right.svg" id="themeScreenRightButton">
+                        </div>
                     </div>
                 </div>
                 <div class="bottomArea">
-                <img src="media/images/logo.svg" id="mainScreenLogo">   
+                    <!-- Dynamic Insertion of Logo -->
+                    <img src="media/images/logo.svg" id="mainScreenLogo">
                     <!-- mainScreen Navbar -->
-                    <div id="mainScreenNavBar" class="navBar">
-                    <ul>
-                    <li class="screenName">Home</li>
-                    <li class="button" id="aboutus">About Us</li>
-                    <li class="button" id="contact">Contact</li>
-                    </ul>
-                    </div> 
+                    <div id="themeScreenNavBar" class="navBar">
+                        <ul>
+                            <li class="screenName">Emily Bear.video</li>
+                            <li class="button" id="navMap">Navigation Map</li>
+                            <li class="button" id="aboutus">About Us</li>
+                            <li class="button" id="contact">Contact</li>
+                        </ul>
+                    </div>
                 </div>
-                
             </div>
         </div>
         <script>
-            document.getElementById('mainScreenBrain').addEventListener("click", gotoNavigationMap);
+            document.getElementById('navMap').addEventListener("click", gotoNavigationMap);
             document.getElementById('aboutus').addEventListener("click", gotoAboutUs);
             document.getElementById('contact').addEventListener("click", gotoContact);
-            document.getElementById('contactModal').addEventListener("click", closeModal)
-            
+            document.getElementById('themeScreenSound').addEventListener("click", gotoEmilyBearSound);
+            document.getElementById('themeScreenText').addEventListener("click", gotoEmilyBearText);
+            document.getElementById('contactModal').addEventListener("click", closeModal);
+            displayButtonsIfMoreThanOnePanel();
         </script>
     </body>
-</html>
+    </html>

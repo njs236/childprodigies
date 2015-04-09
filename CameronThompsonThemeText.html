@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"/>
+        <meta name="mobile-web-app-capable" content="yes">
+         <!-- Class Scripts
+      <script src="src/whynot.js"></script>
+        <script src="src/view.js"></script>
+        <script src="src/controller.js"></script>
+        <script src="src/whynotModel.js"></script>-->
+        <script src="scripts.js"></script>
+        <!-- CSS Files -->
+        <link href="layout.css" rel="stylesheet" type="text/css">
+        <link href="css/mainScreen.css" rel="stylesheet" type="text/css">
+        <link href="css/navigationMapScreen.css" rel="stylesheet" type="text/css">
+        <link href="css/mythScreen.css" rel="stylesheet" type="text/css">
+        <link href="css/themeScreen.css" rel="stylesheet" type="text/css">
+        <title>Why Not? Shattering the Myth</title>
+    </head>
+    <body>
+        <div id="borderDiv">
+            <div id="themeScreen" class="navScreen">
+                <div>
+                    <div id="contactModal" class="modalDialog">
+                        <div id="contactModalContent">
+                            <p>
+                            If you would like to leave some comment regarding this website, or simply want to get in contact, here is a form that you can use to get in contact with me (the producer of the website)
+                            </p>
+                            <form>
+                            <div id="contactModalName">
+                            <label for="Name">Name</label>
+                                <input id="Name" type="text"></input>
+                            </div>
+                            <div id="contactModalEmail">
+                                <label for="Email">Email</label>
+                                <input id="Email "type="text"></input>
+                            </div>
+                            <div id="contactModalComment">
+                            <label for="Comments">Comments</label>
+                                <textarea id="Comments" rows="5"></textArea>
+                            </div>
+                            <div id="contactModalSubmit">
+                                <input type="submit" value="submit"></input>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentArea">
+                    <div class="navArea">
+                        <div class="navButtons">
+                            <ul>
+                                <li id="themeScreenText"><img src="media/images/green.png">Text</li>
+                                <li id="themeScreenVideo"><img src="media/images/pink.png">Visual</li>
+                                <li id="themeScreenKinesthetic"><img src="media/images/blue.png">Kinesthetic</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="themeScreenRightArea">
+                    <img id="themeScreenLeftButton">
+                        <div id="themeScreenElements">
+                        <p>Cameron Thompson is a young boy who has excelled above his age in the area of maths. His story has tugged on my heart, and I think his story will be that to yours too.</p>
+                        <p>He struggles with Aspergers, which makes it hard for him to handle social situations.</p>
+                        <p>He said "I have the social ability of a talking potato" in response to the reasons that he sticks to himself and finds it difficult to make friends.</p>
+                        <p>At the age of 11, Cameron sat a school entrance maths test. "One hundred and forty one out of 140, I broke the system, I think I did well," he says.</p>
+                        <p>At the same age, he sailed through two GCSEs in maths and additional maths, and in the same year passed his maths A-level with flying colours. But being brilliant at maths has become Cameron's entire identity, and trying to fit in at school and develop his social skills has somehow become left behind in a desire to escape mediocrity.</p>
+                        <p>His grades for his degree course have been dropping, and he is panicking. In the first year, his marks were up in the 80s, putting him in the top 0.5%. But on a recent assignment, he scored 72%, a healthy grade by most people's standards, but not enough to secure the distinction that he wants.
+                        </p>
+                        </div>
+                    <img id="themeScreenRightButton">
+                    </div>
+                </div>
+                <div class="bottomArea">
+                    <!-- Dynamic Insertion of Logo -->
+                    <img src="media/images/logo.svg" id="mainScreenLogo">
+                    <!-- mainScreen Navbar -->
+                    <div id="themeScreenNavBar" class="navBar">
+                        <ul>
+                            <li class="screenName">Cameron Thompson.text</li>
+                            <li class="button" id="navMap">Navigation Map</li>
+                            <li class="button" id="aboutus">About Us</li>
+                            <li class="button" id="contact">Contact</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById('navMap').addEventListener("click", gotoNavigationMap);
+            document.getElementById('aboutus').addEventListener("click", gotoAboutUs);
+            document.getElementById('contact').addEventListener("click", gotoContact);
+            document.getElementById('themeScreenKinesthetic').addEventListener("click", gotoCameronThompsonKinesthetic);
+            document.getElementById('themeScreenVideo').addEventListener("click", gotoCameronThompsonVideo);
+            document.getElementById('contactModal').addEventListener("click", closeModal);
+        </script>
+    </body>
+    </html>

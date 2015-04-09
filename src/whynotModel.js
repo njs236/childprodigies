@@ -1,4 +1,4 @@
-whynot.model = (function () {
+model = (function () {
     var Model, Myth, Theme, Media, Text, Link, Video, Sound, Image, initModule;
     /* Constructor Functions */
     Model = function () {

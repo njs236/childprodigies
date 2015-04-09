@@ -20,7 +20,7 @@
     </head>
     <body>
         <div id="borderDiv">
-            <div id="mainScreen" class="navScreen">
+            <div id="navigationMapScreen" class="navScreen">
                 <div>
                     <div id="contactModal" class="modalDialog">
                         <div id="contactModalContent">
@@ -48,31 +48,42 @@
                     </div>
                 </div>
                 <div class="contentArea">
-                    <!-- Dynamic Insertion of Logo -->
-                    <div id="mainScreenBrain">
-                        <!-- Css Image background -->
+                    <div id="navigationMapTable">
+                        <div class="navigationMapRow">
+                            <div class="navigationMapMyth" id="navigationMapMyth1">So You only use 10% of your brain do you?</div>
+                            <div class="navigationMapMyth" id="navigationMapMyth2">Prodigies are only found in the arts.</div>
+                        </div>
+                        <div class="navigationMapRow">
+                            <div class="navigationMapMyth" id="navigationMapMyth3">What would you say about the competitiveness to excel?</div>
+                            <div class="navigationMapMyth" id="navigationMapMyth4">Brains are like computers?</div>
+                        </div>
                     </div>
                 </div>
                 <div class="bottomArea">
-                <img src="media/images/logo.svg" id="mainScreenLogo">   
+                    <img src="media/images/logo.svg" id="mainScreenLogo">
                     <!-- mainScreen Navbar -->
-                    <div id="mainScreenNavBar" class="navBar">
+                    <div id="navigationMapNavBar" class="navBar">
                     <ul>
-                    <li class="screenName">Home</li>
+                    <li class="screenName">Navigation Map</li>
+                    <li class="button" id="home">Home</li>
                     <li class="button" id="aboutus">About Us</li>
                     <li class="button" id="contact">Contact</li>
                     </ul>
-                    </div> 
+                    </div>
+                    
                 </div>
                 
             </div>
         </div>
         <script>
-            document.getElementById('mainScreenBrain').addEventListener("click", gotoNavigationMap);
+            document.getElementById('navigationMapMyth1').addEventListener("click", goto10BrainMyth);
+            document.getElementById('navigationMapMyth2').addEventListener("click", gotoArtsMyth)
+            document.getElementById('navigationMapMyth3').addEventListener("click", gotoExcelMyth)
+            document.getElementById('navigationMapMyth4').addEventListener("click", gotoComputerMyth)
+            document.getElementById('home').addEventListener("click", gotoHome);
             document.getElementById('aboutus').addEventListener("click", gotoAboutUs);
             document.getElementById('contact').addEventListener("click", gotoContact);
             document.getElementById('contactModal').addEventListener("click", closeModal)
-            
         </script>
     </body>
 </html>

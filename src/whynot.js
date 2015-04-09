@@ -1,14 +1,17 @@
 var whynot = {};
+var model = model.initModule() ,
+view = view.initModule(),
+ controller = controller.initModule(view, model);
 whynot.model = {};
 whynot.controller = {};
 whynot.view = {};
 
-
+/*
 whynot = (function () {
     var initModule = function (){
         console.log("initModule loaded");
-        var model = whynot.model.initModule();
-        var view = whynot.view.initModule({mainScreen: {Page: document.getElementById('mainScreen'),
+        var model = model.initModule();
+        var view = view.initModule({mainScreen: {Page: document.getElementById('mainScreen'),
                                                         Brain: document.getElementById('mainScreenBrain')},
                                            navigationMap: {Page: document.getElementById('navigationMapScreen'),
                                                            Table: document.getElementById('navigationMapTable')},
@@ -17,22 +20,14 @@ whynot = (function () {
                                            themeScreen: {Page: document.getElementById('themeScreen'),
                                                          Content: document.getElementById('themeScreenElements')}
                                            });
-        var controller = whynot.controller.initModule(view, model);
+        var controller = controller.initModule(view, model);
+
+
+        
+
         
         view.setController(controller);
-        
-        controller.allObjectsData();
-        
-        /*
-        controller.onClickAddBtn();
-        */
-
-        /*
-        controller.displayAllObjects();
-       */
-        controller.setUpNavigationMap();
-        
     }
 return {initModule: initModule}
 }
-() );
+() ); */

@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"/>
+        <meta name="mobile-web-app-capable" content="yes">
+         <!-- Class Scripts
+      <script src="src/whynot.js"></script>
+        <script src="src/view.js"></script>
+        <script src="src/controller.js"></script>
+        <script src="src/whynotModel.js"></script>-->
+        <script src="scripts.js"></script>
+        <!-- CSS Files -->
+        <link href="layout.css" rel="stylesheet" type="text/css">
+        <link href="css/mainScreen.css" rel="stylesheet" type="text/css">
+        <link href="css/navigationMapScreen.css" rel="stylesheet" type="text/css">
+        <link href="css/mythScreen.css" rel="stylesheet" type="text/css">
+        <link href="css/themeScreen.css" rel="stylesheet" type="text/css">
+        <title>Why Not? Shattering the Myth</title>
+    </head>
+    <body>
+        <div id="borderDiv">
+            <div id="themeScreen" class="navScreen">
+                <div>
+                    <div id="contactModal" class="modalDialog">
+                        <div id="contactModalContent">
+                            <p>
+                            If you would like to leave some comment regarding this website, or simply want to get in contact, here is a form that you can use to get in contact with me (the producer of the website)
+                            </p>
+                            <form>
+                            <div id="contactModalName">
+                            <label for="Name">Name</label>
+                                <input id="Name" type="text"></input>
+                            </div>
+                            <div id="contactModalEmail">
+                                <label for="Email">Email</label>
+                                <input id="Email "type="text"></input>
+                            </div>
+                            <div id="contactModalComment">
+                            <label for="Comments">Comments</label>
+                                <textarea id="Comments" rows="5"></textArea>
+                            </div>
+                            <div id="contactModalSubmit">
+                                <input type="submit" value="submit"></input>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentArea">
+                    <div class="navArea">
+                        <div class="navButtons">
+                            <ul>
+                                <li id="themeScreenText"><img src="media/images/green.png">Text</li>
+                                <li id="themeScreenVideo"><img src="media/images/pink.png">Visual</li>
+                                <li id="themeScreenKinesthetic"><img src="media/images/blue.png">Kinesthetic</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="themeScreenRightArea">
+                    <img id="themeScreenLeftButton">
+                        <div id="themeScreenElements">
+                        <p>Santiago Gonzales is fluent in 10 programming languages, he has developed apps for iOS. He will have his masters degree in programming when he’s 17.</p>
+                        <p>He is currently studying at Colorado school of minds, majoring in Computer Science. He’s a Junior.</p>
+                        <p>He compares His programming to poetry. He is mature in many ways, but in others is still just a child, unconcerned with what is normal, like having a girlfriend, or going to parties.</p>
+                        <p>He is currently a research assistant for a professor at MINDS, building energy efficiency and Santiago is developing the sensor network that will be used.</p>
+                        <p>He loves being in college and learning.</p>
+                        <p>His parents discovered a difference in him at a young age, when he started preschool. But it wasn’t until He started primary school that they discovered he was bored and not enjoying school much. That made them realise that he was very different.</p>
+                        <p>Where as some might try to motivate and make their kids strive to excel, His parents discovered he needed no motivation, since the buzz was in completing a program and letting it be made available to others. That was that He had put something that was important to Him, for others to see too.
+                        </p>
+                        </div>
+                    <img id="themeScreenRightButton">
+                    </div>
+                </div>
+                <div class="bottomArea">
+                    <!-- Dynamic Insertion of Logo -->
+                    <img src="media/images/logo.svg" id="mainScreenLogo">
+                    <!-- mainScreen Navbar -->
+                    <div id="themeScreenNavBar" class="navBar">
+                        <ul>
+                            <li class="screenName">Santiago Gonzalez.text</li>
+                            <li class="button" id="navMap">Navigation Map</li>
+                            <li class="button" id="aboutus">About Us</li>
+                            <li class="button" id="contact">Contact</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById('navMap').addEventListener("click", gotoNavigationMap);
+            document.getElementById('aboutus').addEventListener("click", gotoAboutUs);
+            document.getElementById('contact').addEventListener("click", gotoContact);
+            document.getElementById('themeScreenKinesthetic').addEventListener("click", gotoSantiagoGonzalezKinesthetic);
+            document.getElementById('themeScreenVideo').addEventListener("click", gotoSantiagoGonzalezVideo);
+            document.getElementById('contactModal').addEventListener("click", closeModal);
+        </script>
+    </body>
+    </html>

@@ -10,3 +10,72 @@
     width: 75%;
     height: 100%;
 }
+.panel {
+    float: left;
+    width: 90%;
+    height: 100%;
+}
+
+p {
+    padding: 0.5em;
+    margin: 0.5em;
+    font-size: 1.5em;
+    font-family: MyriadPro, Arial, Serif;
+}
+
+iframe {
+    position: relative;
+    top: 30%;
+    left: 10%;
+    transform: translateY(-70%;)
+    padding: 0.5em;
+    margin : 0.5em;
+    
+}
+
+#leftButton {
+    float: left;
+    width: 5%;
+    height: 100%;
+}
+#leftButton img {
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3em;
+    height: 3em;
+}
+
+#rightButton {
+    float: left;
+    width: 5%;
+    height: 100%;
+}
+#rightButton img {
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3em;
+    height: 3em;
+}
+
+#themeScreenElements img {
+    width: 2.5em;
+    height: 2.5em;
+}
+
+#themeScreenElements ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#themeScreenElements li {
+    float: left;
+    height: 100%;
+}
