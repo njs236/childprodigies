@@ -16,6 +16,7 @@
         <link href="css/navigationMapScreen.css" rel="stylesheet" type="text/css">
         <link href="css/mythScreen.css" rel="stylesheet" type="text/css">
         <link href="css/themeScreen.css" rel="stylesheet" type="text/css">
+        <link href="css/commentModal.css" rel="stylesheet" type="text/css">
         <title>Why Not? Shattering the Myth</title>
     </head>
     <body>
@@ -36,6 +37,10 @@
                                 <label for="Email">Email</label>
                                 <input id="Email "type="text"></input>
                             </div>
+                            <div id="contactModalSubject">
+                                <label for="Subject">Subject</label>
+                                <input id="Subject" type="text"></input>
+                            </div>
                             <div id="contactModalComment">
                             <label for="Comments">Comments</label>
                                 <textarea id="Comments" rows="5"></textArea>
@@ -44,6 +49,9 @@
                                 <input type="submit" value="submit"></input>
                             </div>
                             </form>
+                            <ul>
+                            <li id="close" class="close">Close</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -58,6 +66,10 @@
                         </div>
                     </div>
                     <div id="mythScreenRightArea">
+                        <div class="panel" id="mythScreenElements1">
+                            <video id="video" width="720" height="480" controls>
+                            <source src="media/videos/DrivenToExcel.mp4" type="video/mp4"></video>   
+                        </div>
                     </div>
                 </div>
                 <div class="bottomArea">
@@ -66,7 +78,6 @@
                     <div id="mythScreenNavBar" class="navBar">
                         <ul>
                             <li class="screenName">Emily Bear</li>
-                            <li class="button" id="home">Home</li>
                             <li class="button" id="navMap">Navigation Map</li>
                             <li class="button" id="aboutus">About Us</li>
                             <li class="button" id="contact">Contact</li>
@@ -79,8 +90,7 @@
             document.getElementById('navMap').addEventListener("click", gotoNavigationMap);
             document.getElementById('aboutus').addEventListener("click", gotoAboutUs);
             document.getElementById('contact').addEventListener("click", gotoContact);
-            document.getElementById('home').addEventListener("click", gotoHome);
-            document.getElementById('contactModal').addEventListener("click", closeModal)
+            document.getElementById('close').addEventListener("click", closeModal);
             document.getElementById('mythScreenText').addEventListener("click", gotoEmilyBearText);
             document.getElementById('mythScreenSound').addEventListener("click", gotoEmilyBearSound);
             document.getElementById('mythScreenVideo').addEventListener("click", gotoEmilyBearVideo);

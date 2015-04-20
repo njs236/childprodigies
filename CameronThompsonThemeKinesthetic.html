@@ -16,6 +16,7 @@
         <link href="css/navigationMapScreen.css" rel="stylesheet" type="text/css">
         <link href="css/mythScreen.css" rel="stylesheet" type="text/css">
         <link href="css/themeScreen.css" rel="stylesheet" type="text/css">
+        <link href="css/commentModal.css" rel="stylesheet" type="text/css">
         <title>Why Not? Shattering the Myth</title>
     </head>
     <body>
@@ -36,6 +37,10 @@
                                 <label for="Email">Email</label>
                                 <input id="Email "type="text"></input>
                             </div>
+                            <div id="contactModalSubject">
+                                <label for="Subject">Subject</label>
+                                <input id="Subject" type="text"></input>
+                            </div>
                             <div id="contactModalComment">
                             <label for="Comments">Comments</label>
                                 <textarea id="Comments" rows="5"></textArea>
@@ -44,6 +49,9 @@
                                 <input type="submit" value="submit"></input>
                             </div>
                             </form>
+                            <ul>
+                            <li id="close" class="close">Close</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -61,12 +69,12 @@
                     <img id="themeScreenLeftButton">
                         <div id="themeScreenElements">
                         <p>If you would like to hear more about Cameron, and respond to the request for help to raise funds for His college career, there are a few links below to keep in touch with Him and a facebook group for the movie that was put out.</p>
-                        <p>
+                        <div>
                         <ul>
                         <li id="twitter"><img src="media/images/Twitter_logo_blue.png" ></li>
                         <li id="facebook"><img src="media/images/facebook-icon.png"></li>
                         <li id="youcaring"><img src="media/images/globe.png" ></li>
-                        </p>
+                        </div>
                         </div>
                     <img id="themeScreenRightButton">
                     </div>
@@ -92,7 +100,7 @@
             document.getElementById('contact').addEventListener("click", gotoContact);
             document.getElementById('themeScreenText').addEventListener("click", gotoCameronThompsonText);
             document.getElementById('themeScreenVideo').addEventListener("click", gotoCameronThompsonVideo);
-            document.getElementById('contactModal').addEventListener("click", closeModal);
+            document.getElementById('close').addEventListener("click", closeModal);
             document.getElementById("facebook").addEventListener("click", gotoCameronFacebook);
             document.getElementById("twitter").addEventListener("click", gotoCameronTwitter);
             document.getElementById("youcaring").addEventListener("click", gotoCameronYouCaring);

@@ -7,7 +7,12 @@
     transform: translateY(-50%);
     width: 700px;
     height: 560px;
-    background-image: url("../media/images/brainenlarged.png");
+}
+
+#mainScreenBrain img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .navBar {
@@ -47,7 +52,7 @@
     }
 
 .screenName {
-    padding-left: 2em;
+    padding-left: 0.5em;
     width: 12em;
     background: none;
     background-color: #000;

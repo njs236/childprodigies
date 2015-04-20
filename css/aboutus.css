@@ -1,0 +1,20 @@
+#aboutUsLeftArea {
+    width: 80%;
+}
+
+#aboutUsRightArea {
+    width: 20%;
+}
+
+#aboutUsRightArea img {
+    width: 10em;
+}
+
+#requirements {
+    width: 100%;
+}
+
+#requirements div{
+    float: left;
+    width: 33%;
+}

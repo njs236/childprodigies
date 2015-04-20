@@ -16,6 +16,7 @@
         <link href="css/navigationMapScreen.css" rel="stylesheet" type="text/css">
         <link href="css/mythScreen.css" rel="stylesheet" type="text/css">
         <link href="css/themeScreen.css" rel="stylesheet" type="text/css">
+        <link href="css/commentModal.css" rel="stylesheet" type="text/css">
         <title>Why Not? Shattering the Myth</title>
     </head>
     <body>
@@ -36,6 +37,10 @@
                                 <label for="Email">Email</label>
                                 <input id="Email "type="text"></input>
                             </div>
+                            <div id="contactModalSubject">
+                                <label for="Subject">Subject</label>
+                                <input id="Subject" type="text"></input>
+                            </div>
                             <div id="contactModalComment">
                             <label for="Comments">Comments</label>
                                 <textarea id="Comments" rows="5"></textArea>
@@ -44,6 +49,9 @@
                                 <input type="submit" value="submit"></input>
                             </div>
                             </form>
+                            <ul>
+                            <li id="close" class="close">Close</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -60,13 +68,19 @@
                     <div id="themeScreenRightArea">
                     <img id="themeScreenLeftButton">
                         <div id="themeScreenElements">
-                        <p>If you would like to hear more about Cameron, and respond to the request for help to raise funds for His college career, there are a few links below to keep in touch with Him and a facebook group for the movie that was put out.</p>
-                        <p>
+                        <p>Here are some of the programs that Santiago Gonzalez has released, for Ipad, Ipod and Mac. </p>
+                        <div>
                         <ul>
-                        <li id="twitter"><img src="media/images/Twitter_logo_blue.png" ></li>
-                        <li id="facebook"><img src="media/images/facebook-icon.png"></li>
-                        <li id="youcaring"><img src="media/images/globe.png" ></li>
-                        </p>
+                        <li id="checkers"><img src="media/images/AppCheckers.png" ></li>
+                        <li id="conway"><img src="media/images/AppConway.png"></li>
+                        <li id="metronome"><img src="media/images/AppMetronome.png" ></li>
+                        </ul>
+                        <ul style="clear: both">
+                        <li id="rollability"><img src="media/images/AppRollability.png" ></li>
+                        <li id="slidepuzzle"><img src="media/images/AppSlidePuzzle.png"></li>
+                        <li id="snippets"><img src="media/images/AppSnippets.png" ></li>
+                        </ul>
+                        </div>
                         </div>
                     <img id="themeScreenRightButton">
                     </div>
@@ -92,10 +106,13 @@
             document.getElementById('contact').addEventListener("click", gotoContact);
             document.getElementById('themeScreenText').addEventListener("click", gotoSantiagoGonzalezText);
             document.getElementById('themeScreenVideo').addEventListener("click", gotoSantiagoGonzalezVideo);
-            document.getElementById('contactModal').addEventListener("click", closeModal);
-            document.getElementById("facebook").addEventListener("click", gotoCameronFacebook);
-            document.getElementById("twitter").addEventListener("click", gotoCameronTwitter);
-            document.getElementById("youcaring").addEventListener("click", gotoCameronYouCaring);
+            document.getElementById('close').addEventListener("click", closeModal);
+            document.getElementById("checkers").addEventListener("click", gotoSantiagoCheckers);
+            document.getElementById("conway").addEventListener("click", gotoSantiagoConway);
+            document.getElementById("metronome").addEventListener("click", gotoSantiagoMetronome);
+            document.getElementById("rollability").addEventListener("click", gotoSantiagoRollability);
+            document.getElementById("slidepuzzle").addEventListener("click", gotoSantiagoSlidePuzzle);
+            document.getElementById("snippets").addEventListener("click", gotoSantiagoSnippets);
         </script>
     </body>
     </html>

@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"/>
+        <meta name="mobile-web-app-capable" content="yes">
+         <!-- Class Scripts
+      <script src="src/whynot.js"></script>
+        <script src="src/view.js"></script>
+        <script src="src/controller.js"></script>
+        <script src="src/whynotModel.js"></script>-->
+        <script src="scripts.js"></script>
+        <!-- CSS Files -->
+        <link href="layout.css" rel="stylesheet" type="text/css">
+        <link href="css/mainScreen.css" rel="stylesheet" type="text/css">
+        <link href="css/navigationMapScreen.css" rel="stylesheet" type="text/css">
+        <link href="css/mythScreen.css" rel="stylesheet" type="text/css">
+        <link href="css/themeScreen.css" rel="stylesheet" type="text/css">
+        <link href="css/commentModal.css" rel="stylesheet" type="text/css">
+        <title>Why Not? Shattering the Myth</title>
+    </head>
+    <body>
+        <div id="borderDiv">
+            <div id="themeScreen" class="navScreen">
+                <div>
+                    <div id="contactModal" class="modalDialog">
+                        <div id="contactModalContent">
+                            <p>
+                            If you would like to leave some comment regarding this website, or simply want to get in contact, here is a form that you can use to get in contact with me (the producer of the website)
+                            </p>
+                            <form>
+                            <div id="contactModalName">
+                            <label for="Name">Name</label>
+                                <input id="Name" type="text"></input>
+                            </div>
+                            <div id="contactModalEmail">
+                                <label for="Email">Email</label>
+                                <input id="Email "type="text"></input>
+                            </div>
+                            <div id="contactModalSubject">
+                                <label for="Subject">Subject</label>
+                                <input id="Subject" type="text"></input>
+                            </div>
+                            <div id="contactModalComment">
+                            <label for="Comments">Comments</label>
+                                <textarea id="Comments" rows="5"></textArea>
+                            </div>
+                            <div id="contactModalSubmit">
+                                <input type="submit" value="submit"></input>
+                            </div>
+                            </form>
+                            <ul>
+                            <li id="close" class="close">Close</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentArea">
+                    <div class="navArea">
+                        <div class="navButtons">
+                            <ul>
+                                <li id="themeScreenText"><img src="media/images/green.png">Text</li>
+                                <li id="themeScreenVideo"><img src="media/images/pink.png">Visual</li>
+                                <li id="themeScreenKinesthetic"><img src="media/images/blue.png">Kinesthetic</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="themeScreenRightArea">
+                    <img id="themeScreenLeftButton">
+                        <div id="themeScreenElements">
+                        <p>Here you kind find a website that Tanishq is apart of, because of his work at NASA, called sservi. Move to either his personal page, or to the main page where you can find out more about sservi.</p>
+                        <p>
+                        <img id="tanishq" src="media/images/Tanishq_Mathew_Abraham.jpg" align="center">
+                        </p>
+                        <p>
+                        <img id="sservi" src="media/images/sservi.png" align="center">
+                        </p>
+                        </div>
+                    <img id="themeScreenRightButton">
+                    </div>
+                </div>
+                <div class="bottomArea">
+                    <!-- Dynamic Insertion of Logo -->
+                    <img src="media/images/logo.svg" id="mainScreenLogo">
+                    <!-- mainScreen Navbar -->
+                    <div id="themeScreenNavBar" class="navBar">
+                        <ul>
+                            <li class="screenName">Tanishq Abraham.kinesthetic</li>
+                            <li class="button" id="navMap">Navigation Map</li>
+                            <li class="button" id="aboutus">About Us</li>
+                            <li class="button" id="contact">Contact</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById('navMap').addEventListener("click", gotoNavigationMap);
+            document.getElementById('aboutus').addEventListener("click", gotoAboutUs);
+            document.getElementById('contact').addEventListener("click", gotoContact);
+            document.getElementById('themeScreenText').addEventListener("click", gotoTanishQText);
+            document.getElementById('themeScreenVideo').addEventListener("click", gotoTanishQVideo);
+            document.getElementById('close').addEventListener("click", closeModal);
+            document.getElementById("tanishq").addEventListener("click", gotoTanishqSservi);
+            document.getElementById("sservi").addEventListener("click", gotoSservi);
+        </script>
+    </body>
+    </html>

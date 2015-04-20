@@ -16,6 +16,7 @@
         <link href="css/navigationMapScreen.css" rel="stylesheet" type="text/css">
         <link href="css/mythScreen.css" rel="stylesheet" type="text/css">
         <link href="css/themeScreen.css" rel="stylesheet" type="text/css">
+        <link href="css/commentModal.css" rel="stylesheet" type="text/css">
         <title>Why Not? Shattering the Myth</title>
     </head>
     <body>
@@ -36,6 +37,10 @@
                                 <label for="Email">Email</label>
                                 <input id="Email "type="text"></input>
                             </div>
+                            <div id="contactModalSubject">
+                                <label for="Subject">Subject</label>
+                                <input id="Subject" type="text"></input>
+                            </div>
                             <div id="contactModalComment">
                             <label for="Comments">Comments</label>
                                 <textarea id="Comments" rows="5"></textArea>
@@ -43,14 +48,14 @@
                             <div id="contactModalSubmit">
                                 <input type="submit" value="submit"></input>
                             </div>
-                            </form>
+                            </form><ul><li id="close" class="close">Close</li></ul>
                         </div>
                     </div>
                 </div>
                 <div class="contentArea">
                     <!-- Dynamic Insertion of Logo -->
                     <div id="mainScreenBrain">
-                        <!-- Css Image background -->
+                        <img onmouseover="bigImg(this)"onmouseout="normalImg(this)" style="height: 280px; width: 350px; top:50%; left: 25%"src="media/images/brainenlarged.png">
                     </div>
                 </div>
                 <div class="bottomArea">
@@ -71,8 +76,19 @@
             document.getElementById('mainScreenBrain').addEventListener("click", gotoNavigationMap);
             document.getElementById('aboutus').addEventListener("click", gotoAboutUs);
             document.getElementById('contact').addEventListener("click", gotoContact);
-            document.getElementById('contactModal').addEventListener("click", closeModal)
+            document.getElementById('close').addEventListener("click", closeModal)
             
+function bigImg(x) {
+    x.style.height = "560px";
+    x.style.width = "700px";
+    x.style.left = "0%";
+}
+
+function normalImg(x) {
+    x.style.height = "280px";
+    x.style.width = "350px";
+    x.style.left = "25%";
+}
         </script>
     </body>
 </html>

@@ -8,20 +8,111 @@
       <script src="src/whynot.js"></script>
         <script src="src/view.js"></script>
         <script src="src/controller.js"></script>
-        <script src="src/whynotModel.js"></script>
-        <script src="scripts.js"></script>-->
+        <script src="src/whynotModel.js"></script>-->
+        <script src="scripts.js"></script>
         <!-- CSS Files -->
         <link href="layout.css" rel="stylesheet" type="text/css">
         <link href="css/mainScreen.css" rel="stylesheet" type="text/css">
         <link href="css/navigationMapScreen.css" rel="stylesheet" type="text/css">
         <link href="css/mythScreen.css" rel="stylesheet" type="text/css">
         <link href="css/themeScreen.css" rel="stylesheet" type="text/css">
+        <link href="css/commentModal.css" rel="stylesheet" type="text/css">
+        <link href="css/aboutus.css" rel="stylesheet" type="text/css">
         <title>Why Not? Shattering the Myth</title>
     </head>
     <body>
         <div id="borderDiv">
-            <div id="AboutUs">
+            <div>
+                <div id="contactModal" class="modalDialog">
+                    <div id="contactModalContent">
+                        <p>
+                        If you would like to leave some comment regarding this website, or simply want to get in contact, here is a form that you can use to get in contact with me (the producer of the website)
+                        </p>
+                        <form>
+                        <div id="contactModalName">
+                        <label for="Name">Name</label>
+                            <input id="Name" type="text"></input>
+                        </div>
+                        <div id="contactModalEmail">
+                            <label for="Email">Email</label>
+                            <input id="Email "type="text"></input>
+                        </div>
+                        <div id="contactModalSubject">
+                            <label for="Subject">Subject</label>
+                            <input id="Subject" type="text"></input>
+                        </div>
+                        <div id="contactModalComment">
+                        <label for="Comments">Comments</label>
+                            <textarea id="Comments" rows="5"></textArea>
+                        </div>
+                        <div id="contactModalSubmit">
+                            <input type="submit" value="submit"></input>
+                        </div>
+                        </form>
+                        <ul>
+                        <li id="close" class="close">Close</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="AboutUs" class="contentArea">
+                <div id="aboutUsLeftArea">
+                    <div id="aboutUsContentArea">
+                        <p> The purpose that I had for this website was to enable those who come to get a taste of what is possible for humanity. I hope to draw you in through the lives of children that are excelling in many different areas.
+                        </p>
+                        
+                        <p> If you get a sense of that, then I've achieved my goal. I hope you walk away from this website changed, believing and assured that all things are possible. 
+                        
+                        </p>
+                        
+                        <p> I have made this website accessible on various platforms. Broadband connection required.
+                        
+                        </p>
+                        <div id="requirements">
+                            <div>
+                                <h1>Computer</h1>
+                                <p>Intel Core 2 Duo.</p>
+                                <p>4GB Ram</p>
+                                <p>Colour monitor. </p>
+                            </div>
+                            <div>
+                                <h1>Tablet</h1>
+                                <p>Either Ipad or </p>
+                                <p>Samsung Galaxy Pad.</p>
+                            </div>
+                            <div>
+                                <h1>Laptop</h1>
+                                <p>Intel Core 2 Duo</p>
+                                <p>4GB Ram.</p>  
+                                <p>Colour monitor. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="aboutUsRightArea">
+                    <img src="" >
+                    <img src="" >
+                </div>
+            </div>
+            <div class="bottomArea">
+                <img src="media/images/logo.svg" id="mainScreenLogo">
+                <!-- mainScreen Navbar -->
+                <div id="navigationMapNavBar" class="navBar">
+                <ul>
+                <li class="screenName">About Us</li>
+                <li class="button" id="home">Home</li>
+                <li class="button" id="aboutus">About Us</li>
+                <li class="button" id="contact">Contact</li>
+                </ul>
+                </div>
+                    
             </div>
         </div>
+        
+        <script>
+            document.getElementById('home').addEventListener("click", gotoHome);
+            document.getElementById('contact').addEventListener("click", gotoContact);
+            document.getElementById('close').addEventListener("click", closeModal);
+        </script>
     </body>
     </html>

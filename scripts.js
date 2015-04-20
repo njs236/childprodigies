@@ -1,5 +1,6 @@
 "use strict";
 
+//onclick Events
 
 var gotoNavigationMap = function () {
     window.location = 'NavigationMap.html';
@@ -78,6 +79,18 @@ var gotoTanishQVideo = function () {
     window.location = 'TanishQThemeVideo.html';
 }
 
+var gotoTanishqSservi = function () {
+    var url = 'http://sservi.nasa.gov/tanishq-abraham/',
+    win = window.open(url, '_blank');
+    win.focus();
+}
+
+var gotoSservi = function () {
+    var url = 'http://sservi.nasa.gov/',
+    win = window.open(url, '_blank');
+    win.focus();
+}
+
 var gotoTanishQKinesthetic = function () {
     window.location = 'TanishQThemeKinesthetic.html';
 };
@@ -93,6 +106,45 @@ var gotoSantiagoGonzalezVideo = function () {
 var gotoSantiagoGonzalezKinesthetic = function () {
     window.location = 'SantiagoGonzalezThemeKinesthetic.html';
 }
+
+var gotoSantiagoCheckers = function () {
+    var url = 'https://itunes.apple.com/us/app/checkers-board-game/id405250363?mt=12',
+    win = window.open(url, '_blank');
+    win.focus();
+}
+
+var gotoSantiagoConway = function () {
+    var url = 'https://itunes.apple.com/us/app/conways-game-of-life/id423536172?mt=12',
+    win = window.open(url, '_blank');
+    win.focus();
+}
+
+var gotoSantiagoMetronome = function () {
+    var url = 'https://itunes.apple.com/us/app/digital-metronome/id422025540?mt=8',
+    win = window.open(url, '_blank');
+    win.focus();
+}
+
+var gotoSantiagoRollability = function () {
+    var url = 'https://itunes.apple.com/us/app/rollability/id668396013?mt=12',
+    win = window.open(url, '_blank');
+    win.focus();
+}
+
+var gotoSantiagoSlidePuzzle = function () {
+    var url = 'https://itunes.apple.com/us/app/super-slide-puzzle/id436842485?mt=8',
+    win = window.open(url, '_blank');
+    win.focus();
+}
+
+var gotoSantiagoSnippets = function () {
+    var url = 'https://itunes.apple.com/us/app/snippet-saver/id413605721?mt=12',
+    win = window.open(url, '_blank');
+    win.focus();
+}
+
+
+// functions
 
 var closeModal = function () {
     location.hash = "#";
@@ -146,7 +198,7 @@ var showPagePrevious = function () {
         numerator = numerator - 1;
     };
     panels[numerator].hidden = false;
-}
+};
     
 var displayButtonsIfMoreThanOnePanel = function () {
     var panels = document.getElementsByClassName("panel"),
@@ -158,4 +210,17 @@ var displayButtonsIfMoreThanOnePanel = function () {
         leftButton.addEventListener("click", showPagePrevious);
         rightButton.addEventListener("click", showPageNext);
     }    
+};
+
+var skipNavMap = function () {
+    var videoElement = document.getElementById('navVideo'),
+        skipElement = document.getElementById('navScreenElements1'),
+        nextElement = document.getElementById('navigationMapTable');
+    videoElement.pause();
+    skipElement.hidden = true;
+    nextElement.hidden = false;
 }
+
+var mouseover = function () {
+    document.getElementById('brain').className = 'mouseOver';
+};
