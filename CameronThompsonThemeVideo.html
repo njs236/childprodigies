@@ -70,13 +70,16 @@
                             <img src="media/images/left.svg" id="themeScreenLeftButton">
                         </div>
                         <div class="panel" id="themeScreenElements1">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/7dnxUq9fMv8" frameborder="0" allowfullscreen></iframe>   
+                            <iframe src="https://www.youtube.com/embed/7dnxUq9fMv8" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div class="panel" id="themeScreenElements2" hidden>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/rOwtUe8EyzY" frameborder="0" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/rOwtUe8EyzY" frameborder="0" allowfullscreen></iframe> 
                         </div>
                         <div id="rightButton" hidden>
                             <img src="media/images/right.svg" id="themeScreenRightButton">
+                        </div>
+                        <div id="youtube">
+                        <img src="media/images/youtube.jpg"><br>Video provided by Youtube.  
                         </div>
                     </div>
                 </div>
@@ -90,7 +93,7 @@
                             <li class="button" id="navMap">Navigation Map</li>
                             <li class="button" id="aboutus">About Us</li>
                             <li class="button" id="contact">Contact</li>
-                                            <li><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a></li>
+                            <li class="cc"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a></li>
                         </ul>
                     </div>
                 </div>
@@ -104,6 +107,7 @@
             document.getElementById('themeScreenText').addEventListener("click", gotoCameronThompsonText);
             document.getElementById('close').addEventListener("click", closeModal);
             displayButtonsIfMoreThanOnePanel();
+            document.getElementById('youtube').addEventListener("click", gotoYoutube)
         </script>
     </body>
     </html>

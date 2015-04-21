@@ -2,6 +2,12 @@
 
 //onclick Events
 
+var gotoYoutube = function () {
+    var url = 'http://www.youtube.com',
+    win = window.open(url, '_blank');
+    win.focus();
+}
+
 var gotoNavigationMap = function () {
     window.location = 'NavigationMap.html';
 }

@@ -12,32 +12,38 @@
 }
 .panel {
     float: left;
-    width: 90%;
+    width: 98%;
+    height:60%;
+}
+
+#youtube {
+    clear: both;
+    text-align: center;
+}
+
+iframe {
+    width: 100%;
     height: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.5em;
+    margin : 0.5em;
 }
 
 p {
     width: 100%;
     padding: 0.5em;
     margin: 0.5em;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-family: MyriadPro, Arial, Serif;
 }
 
-iframe {
-    position: relative;
-    top: 30%;
-    left: 10%;
-    transform: translateY(-70%;)
-    padding: 0.5em;
-    margin : 0.5em;
-    
-}
-
 #leftButton {
-    float: left;
+    position: absolute;
+    z-index: 99999;
     width: 5%;
-    height: 100%;
+    height: 60%;
 }
 #leftButton img {
     opacity: 0.4;
@@ -50,9 +56,11 @@ iframe {
 }
 
 #rightButton {
-    float: left;
+    position: absolute;
+    right: 0%;
+    z-index: 99999;
     width: 5%;
-    height: 100%;
+    height: 60%;
 }
 #rightButton img {
     opacity: 0.4;
